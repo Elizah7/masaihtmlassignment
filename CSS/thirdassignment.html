@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header & Fixed Footer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Sticky Header - Always Visible at Top
+  </header>
+
+  <main>
+    <h1>Scrolling Content</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis lorem ut urna ultrices, at fringilla odio gravida.</p>
+    <p>Vivamus non lacinia erat, ac convallis sapien. Fusce lacinia feugiat odio, ac suscipit elit rhoncus vel.</p>
+    <p>Phasellus auctor velit et turpis feugiat, non porttitor justo consequat. Integer feugiat nisl id tellus congue placerat.</p>
+    <p>Sed vel tellus faucibus, pulvinar lorem in, porttitor odio. Proin sodales dui vitae magna malesuada posuere.</p>
+    <p>Curabitur sed orci orci. Morbi id viverra risus. Vestibulum feugiat orci quis nulla luctus, ut volutpat elit sodales.</p>
+    <p>Integer ac arcu quis justo vehicula consequat. Suspendisse potenti. Vivamus ac tellus id libero fermentum euismod.</p>
+    <p>Mauris posuere velit eget tellus sollicitudin, eget volutpat ipsum eleifend. Nulla a lorem facilisis, laoreet sapien nec, faucibus magna.</p>
+    <p>Quisque id ex ultricies, vulputate urna vitae, iaculis augue. Sed vulputate risus vel velit pulvinar porttitor.</p>
+    <p>Aliquam erat volutpat. Nullam consectetur libero vitae sapien gravida, at mattis erat porttitor.</p>
+    <p>Cras lacinia leo sit amet augue pulvinar, at vehicula nisl feugiat. Etiam euismod nunc sit amet sem vulputate faucibus.</p>
+  </main>
+
+  <footer>
+    Fixed Footer - Always at Bottom
+  </footer>
+</body>
+</html>
