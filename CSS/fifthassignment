@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Card Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 992px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Card Layout</h1>
+  <div class="grid-container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 1">
+      <h3>Card Title 1</h3>
+      <p>This is a short description for card one. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 2">
+      <h3>Card Title 2</h3>
+      <p>This is a short description for card two. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 3">
+      <h3>Card Title 3</h3>
+      <p>This is a short description for card three. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 4">
+      <h3>Card Title 4</h3>
+      <p>This is a short description for card four. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 5">
+      <h3>Card Title 5</h3>
+      <p>This is a short description for card five. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 6">
+      <h3>Card Title 6</h3>
+      <p>This is a short description for card six. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 7">
+      <h3>Card Title 7</h3>
+      <p>This is a short description for card seven. It adapts to all screen sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 8">
+      <h3>Card Title 8</h3>
+      <p>This is a short description for card eight. It adapts to all screen sizes.</p>
+    </div>
+  </div>
+</body>
+</html>
