@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .block-element {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #4CAF50;
+      background-color: #e8f5e9;
+      margin-bottom: 15px;
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: #2196F3;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .inline-block-element {
+      display: inline-block;
+      width: 120px;
+      height: 50px;
+      margin: 10px;
+      background-color: #FF9800;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      border-radius: 6px;
+    }
+
+    .hidden-element {
+      display: none;
+      padding: 10px;
+      background-color: #9C27B0;
+      color: #fff;
+      margin-top: 20px;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-top: 20px;
+      background-color: #673AB7;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9575cd;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Display Properties</h1>
+  <p>This page demonstrates how <strong>block</strong>, <strong>inline</strong>, <strong>inline-block</strong>, and <strong>none</strong> elements behave.</p>
+
+  <div class="block-element">I am a Block Element (takes full width)</div>
+  <span class="inline-element">I am an Inline Element</span>
+  <div class="inline-block-element">Inline-Block</div>
+
+  <div class="hidden-element" id="hiddenBox">I am a Hidden Element (toggle me)</div>
+  <button onclick="toggleHidden()">Toggle Hidden Element</button>
+
+  <script>
+    function toggleHidden() {
+      const box = document.getElementById('hiddenBox');
+      box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
