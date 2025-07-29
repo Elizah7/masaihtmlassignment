@@ -15,6 +15,9 @@ function fetchData() {
 
 
 async function fetchDataHandler() {
+
+
+    
   try {
     const result = await fetchData();
     console.log("Fetched data successfully!");
