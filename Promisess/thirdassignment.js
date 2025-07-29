@@ -11,6 +11,7 @@ function checkEvenNumber(num) {
 }
 
 
+
 checkEvenNumber(4)
   .then(console.log)    
   .catch(console.error);
