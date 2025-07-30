@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .product img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    .product-title {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .product-price {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .btn {
+      padding: 6px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #error {
+      color: red;
+      font-weight: bold;
+    }
+    #total-price {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Product Listing</h1>
+  <div id="error"></div>
+  <div class="container" id="product-container"></div>
+  <div id="total-price"></div>
+
+  <script>
+    const API_URL = 'https://fakestoreapi.com/products';
+    const container = document.getElementById('product-container');
+    const errorDiv = document.getElementById('error');
+    const totalPriceDiv = document.getElementById('total-price');
+
+    async function fetchProducts() {
+      try {
+        const response = await fetch(API_URL);
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const products = await response.json();
+
+        products.forEach(product => {
+          console.log(product);
+
+          const productDiv = document.createElement('div');
+          productDiv.className = 'product';
+
+          productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.title}" />
+            <div class="product-title">${product.title}</div>
+            <div class="product-price">$${product.price}</div>
+            <button class="btn">View Details</button>
+          `;
+
+          container.appendChild(productDiv);
+        });
+
+        const totalPrice = products.reduce((acc, product) => acc + product.price, 0);
+        totalPriceDiv.innerText = `Total Price: $${totalPrice.toFixed(2)}`;
+
+      } catch (error) {
+        console.error('Fetch error:', error);
+        errorDiv.innerText = '⚠️ Failed to fetch products. Please try again later.';
+      }
+    }
+
+    fetchProducts();
+  </script>
+
+</body>
+</html>
