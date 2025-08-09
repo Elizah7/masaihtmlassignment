@@ -20,6 +20,8 @@ const App = () => {
     marginTop: "10px",
   };
 
+  
+
   const renderPage = () => {
     if (activePage === "Home") {
       return <h2>Welcome to Home</h2>;
