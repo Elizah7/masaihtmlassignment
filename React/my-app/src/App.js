@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ThemeApp from "./Theme";
 import DailyQuote from "./dailyQoute";
 import UserProfiles from "./userProfile";
+import Stopwatch from "./stopWatch";
 
 const App = () => {
   
@@ -12,6 +13,7 @@ const App = () => {
      <ThemeApp/>
 <DailyQuote/>
 <UserProfiles/>
+<Stopwatch/>
     </div>
   );
 };
