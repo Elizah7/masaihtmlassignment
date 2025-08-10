@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ThemeApp from "./Theme";
 import DailyQuote from "./dailyQoute";
+import UserProfiles from "./userProfile";
 
 const App = () => {
   
@@ -10,6 +11,7 @@ const App = () => {
     <div>
      <ThemeApp/>
 <DailyQuote/>
+<UserProfiles/>
     </div>
   );
 };
